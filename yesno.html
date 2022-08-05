@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Box-Model</title>
+        <style type="text/css">
+            body{
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+            .box{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 70px;
+                width: 50%;
+            }
+            button{
+                margin:0;
+                padding: 0;
+                border:none;
+                height: 70px;   
+                font-weight: bold;
+                letter-spacing: 7px;
+                font-size: 32px;
+            }
+            .yes{
+                width: 50%;
+                color:black;
+                box-shadow: 2px 2px 6px rgb(252, 248, 248),-2px -2px 6px rgb(252, 248, 248);
+                border-top-left-radius:40px;
+                border-bottom-left-radius:40px;
+                background-color: rgb(30, 226, 4);
+                transition: cubic-bezier(0, -0.89, 0.96, 2.85) 3s ;
+            }
+            .yes:hover{
+                width: 150%;
+                color:white;
+                box-shadow: 2px 2px 6px rgba(0,0,0,1),-2px -2px 6px rgba(0,0,0,1);
+                background-color: rgba(6, 148, 13, 0.795);
+                transition: cubic-bezier(0, -0.89, 0.96, 2.85) 2s;
+            }
+            .yes:active{
+                animation: activeyes 10ms cubic-bezier(0, -0.89, 0.96, 2.85)  forwards;
+            }
+            @keyframes activeyes
+            {
+                0%{
+                    background-color: rgba(6, 148, 13, 0.795);
+                    box-shadow: 2px 2px 6px rgba(0,0,0,1),-2px -2px 6px rgba(0,0,0,1);
+                }
+                100%{
+                    background-color: rgba(1, 56, 3, 0.767);
+                    box-shadow: 2px 2px 6px rgb(255, 8, 8),-2px -2px 6px rgb(255, 8, 8);;
+                }
+            }
+            @keyframes activeno
+            {
+                0%{
+                    background-color: rgba(199, 9, 9, 0.801);
+                    box-shadow: 2px 2px 6px rgba(0,0,0,1),-2px -2px 6px rgba(0,0,0,1);
+                }
+                100%{
+                    background-color: rgba(131, 7, 7, 0.925);
+                    box-shadow: 2px 2px 6px rgb(30, 226, 4),-2px -2px 6px rgb(30, 226, 4);
+                }
+            }
+            .no{
+                width: 50%;
+                color:black;
+                box-shadow: 2px 2px 6px rgb(252, 248, 248),-2px -2px 6px rgb(252, 248, 248);
+                border-top-right-radius:40px ;
+                border-bottom-right-radius:40px ;
+                background-color: rgb(255, 8, 8);
+                transition: cubic-bezier(0, -0.89, 0.96, 2.85) 3s ;
+            }
+            .no:hover{
+                width: 100%;
+                color:white;
+                box-shadow: 2px 2px 6px rgba(0,0,0,1),-2px -2px 6px rgba(0,0,0,1);
+                background-color: rgba(199, 9, 9, 0.801);
+                transition:cubic-bezier(0, -0.89, 0.96, 2.85) 3s;
+            }
+            .no:active{
+                animation: activeno 10ms cubic-bezier(0, -0.89, 0.96, 2.85)  forwards;
+            }   
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <button class="yes"><span>YES</span></button>
+            <button class="no"><span>NO</span></button>
+        </div>
+    </body>
+</html>
