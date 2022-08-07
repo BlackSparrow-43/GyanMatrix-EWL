@@ -4,4 +4,5 @@
 
 -     index.html         ==> A Simple webpage using HTML only... 
 -     yesno.html         ==> A small animation using CSS
--     Personal-Portfolio ==> Personal-Portfolio webpage using HTML, CSS, JavaScript
+-     Personal-Portfolio ==> Personal-Portfolio webpage using HTML, CSS, JavaScript.
+-     Social-Media       ==> Creating a Social-media webpage using HTML, CSS, JavaScript.
